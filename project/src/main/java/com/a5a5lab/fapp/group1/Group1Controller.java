@@ -28,11 +28,5 @@ public class Group1Controller {
 		return "group1/group1XdmList";
 	}
 	
-//	@RequestMapping(value = "/group1/group1XdmList")
-//	public String group1XdmList(Model model) {
-//		model.addAttribute("list",group1Service.group1XdmList);		
-//		
-//		return "group1XdmList";
-//	}
 
 }
