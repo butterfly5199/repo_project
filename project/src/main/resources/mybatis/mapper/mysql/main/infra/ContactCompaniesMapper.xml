@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.a5a5lab.fapp.contactcompanies.contactCompaniesDao">
+
+	<resultMap id="resultMapObj" type="com.a5a5lab.fapp.contactcompanies.contactCompaniesDto"></resultMap>
+	  
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			seq,
+			main,
+		   companyName,
+		   departmentName,
+		   positionName,
+		   contact_seq
+		FROM
+		    contactCompanies
+		WHERE 1=1
+		
+		ORDER BY seq DESC	
+	</select>	  
+	  	  
+</mapper>
