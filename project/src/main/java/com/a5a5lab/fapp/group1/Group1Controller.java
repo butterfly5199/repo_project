@@ -15,18 +15,34 @@ public class Group1Controller {
 // html로 데이터 전달
 	
 	@Autowired
-	Group1Service group1Service;
-			
+	Group1Service group1Service; // DI(객체인증)
+
+	// 방법1.
+//	@RequestMapping(value = "/group1/group1XdmList")
+//	public String group1XdmList(Model model) {
+//		List<Group1Dto> group1Dtos = new ArrayList<>();
+//		
+//		group1Dtos = group1Service.selectList();	
+//		
+//		model.addAttribute("listb",group1Dtos);		
+//		
+//		return "group1/group1XdmList";
+//	}
+	
+	// 방법2.
 	@RequestMapping(value = "/group1/group1XdmList")
 	public String group1XdmList(Model model) {
-		List<Group1Dto> group1Dtos = new ArrayList<>();
-		
-		group1Dtos = group1Service.selectList();	
-		
-		model.addAttribute("list",group1Dtos);		
-		
+		model.addAttribute("listb",group1Service.selectList());		
 		return "group1/group1XdmList";
 	}
 	
-
 }
+
+// listb 변수 : group1XdmList.html 파일과 매칭상태 비교 
+
+//<tr th:each="lista:${listb}"> 
+//<td th:text="${lista.seq}"></td>
+//<td th:text="${lista.name}"></td>
+//</tr>
+
+// listb 변수에서 받은 자료를 lista에 담는 것. 동일 자료 위치 확인 필요.
