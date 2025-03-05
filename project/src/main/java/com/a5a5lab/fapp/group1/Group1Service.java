@@ -1,18 +1,12 @@
 package com.a5a5lab.fapp.group1;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class Group1Service {
-	
-//	로직을 정의하는 부분
-
-//	여러 건의 데이터를 가지고 온다.
 	
 	@Autowired
 	Group1Dao group1Dao;
@@ -32,6 +26,9 @@ public class Group1Service {
 		return group1Dao.selectList();
 	}
 	
+	public Dao<Group1Dto> selectOne(){
+		return group1Dao.selectOne();
+	}
 }
 
 

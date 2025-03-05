@@ -13,6 +13,26 @@
 		    group1
 		WHERE 1=1		
 		ORDER BY seq DESC	
-	</select>	  
-	  	  
+	</select>	
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+			name
+		FROM
+		    group1
+		WHERE 1=1	
+			AND	seq=#(seq)
+		ORDER BY seq DESC	
+	</select>
+	
+	<Insert id="insert">
+		INSERT into group1 (
+			seq,
+			name
+		) values(
+			#(seq),
+			#(name)
+			)
+		</Insert>	  	  
 </mapper>

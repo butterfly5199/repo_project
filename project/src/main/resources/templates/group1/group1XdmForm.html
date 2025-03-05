@@ -4,18 +4,11 @@
 </head>
 <body>
 
-<table>
-	<tr>
-		<td>seq</td>
-		<td>name</td>
-	</tr>
-	<tr th:each="lista:${listb}"> 
-		<td th:text="${lista.seq}"></td>
-		<td th:text="${lista.name}"></td>
-	</tr>
-</table>
-<br>
-	<a href="group1/group1XdmForm">등록</a>
+<form action="/group1/group1XdmInst" method="post" enctype="multipart/form-data">
+	seq:<input type="text" name="seq" maxlength="10"/>
+	name=<input type="text" name="name" placeholder="이름을 입력"/>
+	<button type="submit">저장</button>
+</form>
 
 </body>
 </html>

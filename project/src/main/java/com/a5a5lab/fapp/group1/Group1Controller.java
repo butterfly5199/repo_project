@@ -1,8 +1,5 @@
 package com.a5a5lab.fapp.group1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +33,53 @@ public class Group1Controller {
 		return "group1/group1XdmList";
 	}
 	
+	
+	@RequestMapping(value = "/group1/group1XdmView")
+	public String group1XdmView(Model model, Group1Dto group1Dto) {
+		
+		System.out.println("group1Dto.getSeq()" + group1Dto.getSeq());
+				
+		model.addAttribute("item", group1Service.selectOne(group1Dto));		
+		return "group1/group1XdmWiew";
+	}
+		
+	
+	@RequestMapping(value = "/group1/group1XdmForm")
+	public String group1XdmForm() {
+		
+		return "group1/group1XdmForm";
+	}
+	
+	
+	@RequestMapping(value = "/group1/group1XdmInst")
+	public String group1XdmInst(Group1Dto group1Dto) {
+		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
+		System.out.println("group1Dto.getName(): " + group1Dto.getName());
+		
+		group1Service.insert(group1Dto);
+		
+		return "redirect:/group1/group1XdmList";		
+	}
+		
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // listb 변수 : group1XdmList.html 파일과 매칭상태 비교 
 

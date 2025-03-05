@@ -7,8 +7,8 @@ public class ContactCompaniesDto {
 	private String companyName;
 	private String departmentName;
 	private String positionName;
-	private Integer contact_seq;	
-
+	private Integer contact_seq;
+	
 	public String getSeq() {
 		return seq;
 	}
@@ -44,8 +44,8 @@ public class ContactCompaniesDto {
 	}
 	public void setContact_seq(Integer contact_seq) {
 		this.contact_seq = contact_seq;
-	}
-	
+	}	
+
 //	-----
 	
 }

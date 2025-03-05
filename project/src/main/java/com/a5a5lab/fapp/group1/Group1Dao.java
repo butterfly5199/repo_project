@@ -11,6 +11,8 @@ public interface Group1Dao {
 //	쿼리 결과를 가져옴
 	
 	public List<Group1Dto> selectList();
+	public Group1Dto selectOne(Group1Dto group1Dto);
+	public Group1Dto insert(Group1Dto group1Dto);
 	
-	
+//	public Dao<Group1Dto> selectOne();	
 }
