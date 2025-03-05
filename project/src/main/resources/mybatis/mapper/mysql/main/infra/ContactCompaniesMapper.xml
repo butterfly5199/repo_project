@@ -14,10 +14,43 @@
 		   positionName,
 		   contact_seq
 		FROM
-		    contactCompanies
+		    contactcompanies
 		WHERE 1=1
-		
 		ORDER BY seq DESC	
 	</select>	  
-	  	  
+	
+	<select id="selectOne" rusultMap="resultMapObj">
+		SELECT
+			seq,
+			main,
+			cpmpanyName,
+			departmentName,
+			positionName,
+			contact_seq
+		FROM
+			contactcompanies
+		WHERE 1=1
+			AND seq=#{seq}	
+		ORDER BY seq DESC
+	</select>
+	
+	<insert id="insert">
+		INSERT into contactcompanies (
+			main,
+			companyName,
+			departmentName,
+			positionName,
+			contact_seq
+		) values(
+			#{main}
+			#{companyName}
+			#{dapartmentName}
+			#{positionName}
+			#{contact_seq}		
+			)
+		
+		<selectKey resulType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>	  	  
 </mapper>

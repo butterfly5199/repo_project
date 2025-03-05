@@ -5,15 +5,40 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ContactCompaniesController {
+public class contactCompanies {
 	@Autowired
-	ContactCompaniesService contactCompaniesService;
+	ContactCompaniesService contactCompaniesService;	
 	
 	
-	
-	@RequestMapping(value = "/contactCompanies/contactCompaniesXdmList")
+	@RequestMapping(value = "/contactcompanies/contactCompaniesXdmList")
 	public String contactCompaniesXdmList(Model model) {
 		model.addAttribute("list",contactCompaniesService.selectList());		
-		return "contactCompanies/contactCompaniesXdmList";
+		return "contactcompanies/contactCompaniesXdmList"; 
 	}
+	
+	
+	@RequestMapping(value="/contactcompanies/contactCompaniesXdmView")
+	public String contactCompaniesXdmView(Model model, contactCompaniesDto contactCompaniesDto) {
+		
+		model.addAttribute("item", contactCompaniesService.selectOne(contactCompaniesDto));
+		return "contactcompanies/contactCompaniesXdmView";
+	}
+	
+	@RequestMapping(value="/contactcompanies/contactCompaniesXdmForm")
+	public String contactCompaniesXdmForm() {
+		
+		return "contactcompanies/contactCompaniesXdmForm";
+	}
+	
+	@RequestMapping(value="/contactcompanies/contactCompaniesXdmInst")
+	public String contactCompaniesXdmInst(ContactCompaniesDto contactCompanies) {
+		System.out.println("contactcompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
+		System.out.println("contactcompaniesDto.getName(): " + ontactCompaniesDto.getName());
+		
+		contactCompaniesService.insert(contactCompaniesDto);
+		System.out.println("contactCompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
+		
+		return "redirect:/contactcompanies/contactCompaniesXdmList";
+	}
+	
 }

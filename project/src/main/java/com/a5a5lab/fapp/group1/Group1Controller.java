@@ -36,7 +36,6 @@ public class Group1Controller {
 	
 	@RequestMapping(value = "/group1/group1XdmView")
 	public String group1XdmView(Model model, Group1Dto group1Dto) {
-		
 	
 				
 		model.addAttribute("item", group1Service.selectOne(group1Dto));		
@@ -56,7 +55,6 @@ public class Group1Controller {
 		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
 		System.out.println("group1Dto.getName(): " + group1Dto.getName());
 		
-//		group1Service.insert(group1Dto);
 		group1Service.insert(group1Dto);
 		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
 		
