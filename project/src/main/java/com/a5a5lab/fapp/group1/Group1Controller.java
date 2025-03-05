@@ -56,6 +56,7 @@ public class Group1Controller {
 		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
 		System.out.println("group1Dto.getName(): " + group1Dto.getName());
 		
+//		group1Service.insert(group1Dto);
 		group1Service.insert(group1Dto);
 		
 		return "redirect:/group1/group1XdmList";		

@@ -26,8 +26,12 @@ public class Group1Service {
 		return group1Dao.selectList();
 	}
 	
-	public Dao<Group1Dto> selectOne(){
-		return group1Dao.selectOne();
+	public Group1Dto selectOne(Group1Dto group1Dto){
+		return group1Dao.selectOne(group1Dto);
+	}
+	
+	public int insert(Group1Dto group1Dto){
+		return group1Dao.insert(group1Dto);
 	}
 }
 

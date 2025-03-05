@@ -26,7 +26,7 @@
 		ORDER BY seq DESC	
 	</select>
 	
-	<Insert id="insert">
+	<insert id="insert">
 		INSERT into group1 (
 			seq,
 			name
@@ -34,5 +34,5 @@
 			#(seq),
 			#(name)
 			)
-		</Insert>	  	  
+	</insert>	  	  
 </mapper>
