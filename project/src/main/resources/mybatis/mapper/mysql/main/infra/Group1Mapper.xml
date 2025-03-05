@@ -22,17 +22,19 @@
 		FROM
 		    group1
 		WHERE 1=1	
-			AND	seq=#(seq)
+			AND	seq=#{seq}
 		ORDER BY seq DESC	
 	</select>
 	
 	<insert id="insert">
 		INSERT into group1 (
-			seq,
 			name
 		) values(
-			#(seq),
-			#(name)
-			)
+			#{name}
+			)    <!-- seq, colum num 등 auto increment 생략 가능-->
+			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>			
 	</insert>	  	  
 </mapper>

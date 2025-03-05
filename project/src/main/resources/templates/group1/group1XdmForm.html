@@ -4,13 +4,27 @@
 </head>
 <body>
 
-<form action="/group1/group1XdmInst" method="post" enctype="multipart/form-data">
-	seq:<input type="text" name="seq" maxlength="10"/>
-	name=<input type="text" name="name" placeholder="이름을 입력"/>
-	<button type="submit">저장</button>
+<form action="/group1/group1XdmInst" method="post" id="form">
+	seq : <input type="text" name="seq" id="seq" maxlength="10" disabled/>
+	name : <input type="text" name="name" id="name" placeholder="이름을 입력"/>
+	<button type="button" id="btnSave">저장</button>
 </form>
+<script type="text/javascript">
+	
+	document.getElementById("btnSave").onclick= function(){
+//		location.href="/group1/group1XdmInst"   //* event 발생시킴.	
+		document.getElementById("form").submit(); // form을 전송하도록 함.
+	}
 
-</body>
+	// * event 발생시킴.	
+//	document.getElementById("name").onclick = function() {
+//		alert("name");
+//	}	
+	
+	
+</script>
+<!-- js 영역은 가급적 body 위에-->
+</body>  
 </html>
 
 <!-- listb 변수 : Group1Controller.java 파일과 매칭상태 비교해 볼 것 -->

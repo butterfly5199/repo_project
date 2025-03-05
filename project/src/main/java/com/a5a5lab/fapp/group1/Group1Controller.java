@@ -37,10 +37,10 @@ public class Group1Controller {
 	@RequestMapping(value = "/group1/group1XdmView")
 	public String group1XdmView(Model model, Group1Dto group1Dto) {
 		
-		System.out.println("group1Dto.getSeq()" + group1Dto.getSeq());
+	
 				
 		model.addAttribute("item", group1Service.selectOne(group1Dto));		
-		return "group1/group1XdmWiew";
+		return "group1/group1XdmView";
 	}
 		
 	
@@ -58,6 +58,7 @@ public class Group1Controller {
 		
 //		group1Service.insert(group1Dto);
 		group1Service.insert(group1Dto);
+		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
 		
 		return "redirect:/group1/group1XdmList";		
 	}

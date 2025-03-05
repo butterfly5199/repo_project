@@ -3,20 +3,19 @@
 <head>
 </head>
 <body>
+	<table>
+		<tr>
+			<td>seq</td>
+			<td>name</td>
+		</tr>
+		<tr> 
+			<td th:text="${item.seq}"></td>
+			<td th:text="${item.name}"></td>
+		</tr>
+	</table>
 
-<table>
-	<tr>
-		<td>seq</td>
-		<td>name</td>
-	</tr>
-	<tr th:each="lista:${listb}"> 
-		<td th:text="${lista.seq}"></td>
-		<td><a th:href="@{/group1/group1XdmView(seq=${lista.seq})}" th:text="${lista.name}"></a></td>
-	</tr>
-</table>
-<br>
-	<a href="/group1/group1XdmForm">등록</a>
 
+	
 </body>
 </html>
 
