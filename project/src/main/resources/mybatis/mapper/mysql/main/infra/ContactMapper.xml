@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.a5a5lab.fapp.contact.ContactDao">
+
+	<resultMap id="resultMapObj" type="com.a5a5lab.fapp.contact.ContactDto"></resultMap>
+	  
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			seq,
+			navertId,
+			photoImage,
+			honorificTitle,
+			lastName,
+			middleName,
+			firstname,
+			title,
+			nickName,
+			memo
+		FROM
+		    contact
+		WHERE 1=1		
+		ORDER BY seq DESC	
+	</select>	 
+	  	  
+</mapper>

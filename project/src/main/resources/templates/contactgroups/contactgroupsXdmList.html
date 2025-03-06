@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>contact_seq</td>
+		<td>group1_seq</td>
+	</tr>
+	<tr th:each="list:${list}"> 
+		<td th:text="${list.seq}"></td>
+		<td th:text="${list.contact_seq}"></td>
+		<td th:text="${list.group1_seq}"></td>
+	</tr>
+</table>
+
+</body>
+</html>

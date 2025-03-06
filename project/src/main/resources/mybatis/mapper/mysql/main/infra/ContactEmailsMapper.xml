@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.a5a5lab.fapp.group1.Group1Dao">
+<mapper namespace="com.a5a5lab.fapp.group1.ContactEmailsDao">
 
-	<resultMap id="resultMapObj" type="com.a5a5lab.fapp.group1.Group1Dto"></resultMap>
+	<resultMap id="resultMapObj" type="com.a5a5lab.fapp.contactemails.ContactEmailsDto"></resultMap>
 	  
 	<select id="selectList" resultMap="resultMapObj">
 		SELECT
 			seq,
-			name
+			main,
+			email,
+			contact_seq
 		FROM
-		    group1
+		    contactemails
 		WHERE 1=1		
 		ORDER BY seq DESC	
 	</select>	  
