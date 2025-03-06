@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.a5a5lab.fapp.group1.Group1Dto;
+
 @Controller
 public class ContactController {
 
@@ -34,7 +36,7 @@ public class ContactController {
 	public String contactXdmView(Model model, ContactDto contactDto) {
 		
 		model.addAttribute("item", contactService.selectOne(contactDto));
-		return "contact/contcatXdmView";
+		return "contact/contactXdmView";
 	}
 	
 	@RequestMapping(value="/contact/contactXdmForm")
@@ -59,7 +61,15 @@ public class ContactController {
 		
 		model.addAttribute("item", contactService.selectOne(contactDto));
 		
-		return "/contact/contactXdmMfom";
+		return "contact/contactXdmMfom";
+	}
+	
+	@RequestMapping(value = "/contact/contactXdmUpdt")
+	public String contactXdmUpdt(ContactDto contactDto) {
+		System.out.println("contactDto.getSeq(): " + contactDto.getSeq());
+		System.out.println("contactDto.getName(): " + contactDto.getMemo());
+		contactService.update(contactDto);		
+		return "redirect:/group1/group1XdmList";
 	}
 	
 }

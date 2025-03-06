@@ -22,5 +22,68 @@
 		WHERE 1=1		
 		ORDER BY seq DESC	
 	</select>	 
+	
+	<select id="selectOne" resultMap="resultMapObj">
+	SELECT
+			seq,
+			navertId,
+			photoImage,
+			honorificTitle,
+			lastName,
+			middleName,
+			firstname,
+			title,
+			nickName,
+			memo
+	FROM
+		contact
+		WHERE 1=1
+		AND seq=#{seq}
+	</select>
+	
+		<insert id="insert">
+		INSERT INTO contact
+		(
+			navertId,
+			photoImage,
+			honorificTitle,
+			lastName,
+			middleName,
+			firstname,
+			title,
+			nickName,
+			memo
+		)
+		VALUES
+		(
+			#{navertId},
+			#{photoImage},
+			#{honorificTitle},
+			#{lastName},
+			#{middleName},
+			#{firstname},
+			#{title},
+			#{nickName},
+			#{memo}
+		)
+		
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>		
+	 
+	 <update id="update">
+	 	UPDATE contact SET
+	 		naverId=#{naverId}
+			photoImage=#{photoImage}
+			honorificTitle=#{honorificTitle}
+			lastName=#{lastName}
+			middleName=#{middleName}
+			firstname=#{firstname}
+			title=#{title}
+			nickName=#{nickName}
+			memo=#{memo}
+	 	WHERE seq=#{seq}	
+	 </update>	
 	  	  
 </mapper>

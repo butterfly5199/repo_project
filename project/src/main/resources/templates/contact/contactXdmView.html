@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	
+<table>
+	<tr>
+		<td>seq</td>
+		<td>navertId</td>
+		<td>photoImage</td>
+		<td>honorificTitle</td>
+		<td>lastName</td>
+		<td>middleName</td>
+		<td>firstname</td>
+		<td>title</td>
+		<td>nickName</td>
+		<td>memo</td>
+	</tr>
+		<td th:text="${item?.seq}"></td>
+		<td th:text="${item?.naverId}"></td>
+		<td th:text="${item?.photoImage}"></td>
+		<td th:text="${item?.honorificTitle}"></td>
+		<td th:text="${item?.lastName}"></td>
+		<td th:text="${item?.middleName}"></td>
+		<td th:text="${item?.firstname}"></td>
+		<td th:text="${item?.title}"></td>
+		<td th:text="${item?.nickName}"></td>
+		<td th:text="${item?.memo}"></td>				
+	</tr>
+</table>
+
+
+<br>
+<br>
+<a href="/contact/contactXdmList">목록</a>
+<a href="">삭제</a>
+<a href="{/contact/contactXdmMfom(seq=${item.seq})}">수정</a>
+
+</body>
+</html>

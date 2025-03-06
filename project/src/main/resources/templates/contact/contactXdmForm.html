@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/contact/contactXdmInst" method="post" id="form">
+	seq : <input type="text" name="seq" id="seq" maxlength="10" disabled/>
+	naverId : <input type="text" name="naverId" id="naverId" maxlength="20"/>
+	photoImage : <input type="text" name="photoImage" id="photoImage" maxlength="20"/>
+	honorificTitle : <input type="text" name="honorificTitle" id="honorificTitle" maxlength="20"/>
+	<br>
+	lastName : <input type="text" name="lastName" id="lastName" maxlength="20"/>
+	middleName : <input type="text" name="middleName" id="middleName" maxlength="20"/>
+	firstname : <input type="text" name="firstname" id="firstname" maxlength="20"/>
+	<br>
+	title : <input type="text" name="title" id="title" maxlength="20"/>	
+	nickName : <input type="text" name="nickName" id="nickName" maxlength="20"/>
+	memo : <input type="text" name="memo" id="memo" maxlength="100"/>
+	<button type="button" id="btnSave">저장</button>
+</form>
+<script type="text/javascript">
+	
+	document.getElementById("btnSave").onclick= function(){
+//		location.href="/contact/contactXdmInst"   //* event 발생시킴.	
+		document.getElementById("form").submit(); // form을 전송하도록 함.
+	}
+
+	// * event 발생시킴.	
+//	document.getElementById("name").onclick = function() {
+//		alert("name");
+//	}	
+	
+	
+</script>
+<!-- js 영역은 가급적 body 위에-->
+</body>  
+</html>
+
+<!-- listb 변수 : Group1Controller.java 파일과 매칭상태 비교해 볼 것 -->
+<!-- listb 변수에서 받은 자료를 lista에 담는 것. 동일 자료 위치 확인 필요 -->

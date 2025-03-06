@@ -19,17 +19,20 @@
 	</tr>
 	<tr th:each="list:${list}"> 
 		<td th:text="${list.seq}"></td>
-		<td th:text="${list.navertId}"></td>
-		<td th:text="${list.photoImage}"></td>
-		<td th:text="${list.honorificTitle}"></td>
-		<td th:text="${list.lastName}"></td>
-		<td th:text="${list.middleName}"></td>
-		<td th:text="${list.firstname}"></td>
-		<td th:text="${list.title}"></td>
-		<td th:text="${list.nickName}"></td>
-		<td th:text="${list.memo}"></td>
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.navertId}" ></a><td>
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.photoImage}" ></a><td>
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.honorificTitle}" ></a><td>
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.lastName}" ></a><td>
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.middleName}" ></a><td>					
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.firstname}" ></a><td>			
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.title}" ></a><td>			
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.nickName}" ></a><td>			
+		<td><a th:href="@{/contact/contactXdmView(seq=${list.seq})}" th:text="${list.memo}" ></a><td>			
 	</tr>
 </table>
+<br>
+
+<a href="/contact/contactXdmForm">등록</a>
 
 </body>
 </html>
