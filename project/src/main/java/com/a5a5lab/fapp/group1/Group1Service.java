@@ -33,6 +33,14 @@ public class Group1Service {
 	public int insert(Group1Dto group1Dto){
 		return group1Dao.insert(group1Dto);
 	}
+	
+	public int update(Group1Dto group1Dto){
+		return group1Dao.update(group1Dto);
+	}
+	
 }
+
+
+
 
 

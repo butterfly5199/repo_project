@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class contactCompanies {
+public class ContactCompaniesController {
 	@Autowired
 	ContactCompaniesService contactCompaniesService;	
 	
@@ -17,28 +17,28 @@ public class contactCompanies {
 	}
 	
 	
-	@RequestMapping(value="/contactcompanies/contactCompaniesXdmView")
-	public String contactCompaniesXdmView(Model model, contactCompaniesDto contactCompaniesDto) {
+//	@RequestMapping(value="/contactcompanies/contactCompaniesXdmView")
+//	public String contactCompaniesXdmView(Model model, ContactCompaniesDto contactCompaniesDto) {
 		
-		model.addAttribute("item", contactCompaniesService.selectOne(contactCompaniesDto));
-		return "contactcompanies/contactCompaniesXdmView";
-	}
+//		model.addAttribute("item", contactCompaniesService.selectOne(contactCompaniesDto));
+//		return "contactcompanies/contactCompaniesXdmView";
+//	}
+//	
+//	@RequestMapping(value="/contactcompanies/contactCompaniesXdmForm")
+//	public String contactCompaniesXdmForm() {
+//		
+//		return "contactcompanies/contactCompaniesXdmForm";
+//	}
 	
-	@RequestMapping(value="/contactcompanies/contactCompaniesXdmForm")
-	public String contactCompaniesXdmForm() {
+//	@RequestMapping(value="/contactcompanies/contactCompaniesXdmInst")
+//	public String contactCompaniesXdmInst(ContactCompaniesDto contactCompaniesDto) {
+//		System.out.println("contactcompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
+//		System.out.println("contactcompaniesDto.getName(): " + contactcompaniesDto.getName());
 		
-		return "contactcompanies/contactCompaniesXdmForm";
-	}
-	
-	@RequestMapping(value="/contactcompanies/contactCompaniesXdmInst")
-	public String contactCompaniesXdmInst(ContactCompaniesDto contactCompanies) {
-		System.out.println("contactcompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
-		System.out.println("contactcompaniesDto.getName(): " + ontactCompaniesDto.getName());
-		
-		contactCompaniesService.insert(contactCompaniesDto);
-		System.out.println("contactCompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
-		
-		return "redirect:/contactcompanies/contactCompaniesXdmList";
-	}
+//		contactCompaniesService.insert(contactCompaniesDto);
+//		System.out.println("contactCompaniesDto.getSeq(): " + contactCompaniesDto.getSeq());
+//		
+//		return "redirect:/contactcompanies/contactCompaniesXdmList";
+//	}
 	
 }

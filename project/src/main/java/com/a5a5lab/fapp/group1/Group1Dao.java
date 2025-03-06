@@ -13,6 +13,7 @@ public interface Group1Dao {
 	public List<Group1Dto> selectList();
 	public Group1Dto selectOne(Group1Dto group1Dto);
 	public int insert(Group1Dto group1Dto);
+	public int update(Group1Dto group1Dto);
 	
 //	public Dao<Group1Dto> selectOne();	
 }

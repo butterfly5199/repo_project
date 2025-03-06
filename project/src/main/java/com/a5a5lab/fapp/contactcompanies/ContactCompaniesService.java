@@ -26,12 +26,12 @@ public class ContactCompaniesService {
 		return contactCompaniesDao.selectList();
 	}
 	
-	public ContactCompaniesDto selectOne(ContactCompaniesDto contactcompaniesDto){
-		return contactCompaniesDao.selectOne(contactCompaniesDto);
-	}
-	
-	public int insert(ContactCompaniesDto contactCompaniesDto) {
-		return contactcompaniesDao.insert(contactCompaniesDto);		
-	}
+//	public ContactCompaniesDto selectOne(ContactCompaniesDto contactcompaniesDto){
+//		return contactCompaniesDao.selectOne(contactCompaniesDto);
+//	}
+//	
+//	public int insert(ContactCompaniesDto contactCompaniesDto) {
+//		return contactcompaniesDao.insert(contactCompaniesDto);		
+//	}
 	
 }

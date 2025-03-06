@@ -14,22 +14,22 @@ public class ContactAddressController {
 	ContactAddressService contactAddressService; // DI(객체인증)
 
 	// 방법1.
-//	@RequestMapping(value = "/contactAddress/contactAddressXdmList")
-//	public String contactAddressXdmList(Model model) {
+//	@RequestMapping(value = "/contactaddress/contactaddressXdmList")
+//	public String contactaddressXdmList(Model model) {
 //		List<ContactAddressDto> contactAddressDtos = new ArrayList<>();
 //		
 //		contactAddressDtos = contactAddressService.selectList();	
 //		
 //		model.addAttribute("list",contactAddressDtos);		
 //		
-//		return "contactAddress/contactAddressXdmList";
+//		return "contactaddress/contactaddressXdmList";
 //	}
 	
 	// 방법2.
-	@RequestMapping(value = "/contactAddress/contactAddressXdmList")
-	public String group1XdmList(Model model) {
+	@RequestMapping(value = "/contactaddress/contactaddressXdmList")
+	public String contactaddressXdmList(Model model) {
 		model.addAttribute("listb",contactAddressService.selectList());		
-		return "contactAddress/contactAddressXdmList";
+		return "contactaddress/contactaddressXdmList";
 	}
 	
 }

@@ -58,10 +58,33 @@ public class Group1Controller {
 		group1Service.insert(group1Dto);
 		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
 		
-		return "redirect:/group1/group1XdmList";		
+		return "redirect:/group1/group1XdmList";	
 	}
+	
+	@RequestMapping(value = "/group1/group1XdmMfom")
+	public String group1XdmMfom(Group1Dto group1Dto, Model model) {
 		
+		model.addAttribute("item", group1Service.selectOne(group1Dto));	
+		
+		return "/group1/group1XdmMfom";
+	}
+
+	
+//	@RequestMapping(value = "/group1/group1XdmUpdt1")
+//	public String group1XdmUpdt1() {
+//		
+//		return "redirect:/group1/group1XdmList";
+//	}
+	
+	@RequestMapping(value = "/group1/group1XdmUpdt")
+	public String group1XdmUpdt(Group1Dto group1Dto) {
+		System.out.println("group1Dto.getSeq(): " + group1Dto.getSeq());
+		System.out.println("group1Dto.getName(): " + group1Dto.getName());
+		group1Service.update(group1Dto);		
+		return "redirect:/group1/group1XdmList";
+	}
 }
+
 
 
 

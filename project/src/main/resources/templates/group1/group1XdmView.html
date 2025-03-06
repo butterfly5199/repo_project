@@ -9,11 +9,17 @@
 			<td>name</td>
 		</tr>
 		<tr> 
-			<td th:text="${item.seq}"></td>
-			<td th:text="${item.name}"></td>
+			<td th:text="${item?.seq}"></td>
+			<td th:text="${item?.name}"></td>
 		</tr>
 	</table>
+	
 
+<br>
+<br>
+<a href="/group1/group1XdmList">목록</a>
+<a href="">삭제</a>
+<a th:href="@{/group1/group1XdmMfom(seq=${item?.seq})}">수정</a>
 
 	
 </body>
