@@ -46,19 +46,20 @@ public class ContactController {
 	@RequestMapping(value="/contact/contactXdmInst")
 	public String contactXdmInst(ContactDto contactDto) {
 		System.out.println("contactDto.getSeq(): " + contactDto.getSeq());
-		System.out.println("contactDto.getName(): " + contactDto.getName());
+		System.out.println("contactDto.getMemo(): " + contactDto.getMemo());
 		
-		contactSevice.insert(contactDto);
+		contactService.insert(contactDto);
 		System.out.println("contactDto.getSeq(): " + contactDto.getSeq());
 		
-		return  "rledirect:/contact/contactXdmList";
-		
+		return  "redirect:/contact/contactXdmList";		
 	}
 		
 	@RequestMapping(value="/contact/contactXdmMfom")
 	public String contactXdmMfom(ContactDto contactDto, Model model) {
 		
-		model.addAtt
+		model.addAttribute("item", contactService.selectOne(contactDto));
+		
+		return "/contact/contactXdmMfom";
 	}
 	
 }
