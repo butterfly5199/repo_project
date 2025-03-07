@@ -69,7 +69,7 @@ public class ContactController {
 		System.out.println("contactDto.getSeq(): " + contactDto.getSeq());
 		System.out.println("contactDto.getName(): " + contactDto.getMemo());
 		contactService.update(contactDto);		
-		return "redirect:/group1/group1XdmList";
+		return "redirect:/contact/contactXdmList";
 	}
 	
 }

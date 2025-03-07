@@ -6,9 +6,9 @@
 
 <form action="/contact/contactXdmUpdt" method="post" id="form">
 	<input type="hidden" name="seq" value="${item.seq}"/>
-	<input type="hidden" name="seq" value="${item.naverId}"/>
+	<input type="hidden" name="seq" value="${item.navertId}"/>
 	seq : <input type="text" name="seq" id="seq" maxlength="10" disabled th:value="${item?.seq}"/>
-	naverId : <input type="text" name="naverId" id="naverId" placeholder="네이버아이디를 입력" th:value="${item?.naverId}"/>
+	navertId : <input type="text" name="navertId" id="navertId" placeholder="네이버아이디를 입력" th:value="${item?.navertId}"/>
 	photoImage : <input type="text" name="photoImage" id="photoImage" placeholder="이미지를 입력" th:value="${item?.photoImage}"/>
 	honorificTitle : <input type="text" name="honorificTitle" id="honorificTitle" placeholder="경칭을 입력" th:value="${item?.honorificTitle}"/>
 	lastName : <input type="text" name="lastName" id="lastName" placeholder="이름을 입력" th:value="${item?.lastName}"/>

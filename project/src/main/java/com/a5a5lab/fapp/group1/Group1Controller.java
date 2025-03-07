@@ -83,6 +83,14 @@ public class Group1Controller {
 		group1Service.update(group1Dto);		
 		return "redirect:/group1/group1XdmList";
 	}
+	
+	@RequestMapping(value = "/group1/group1XdmDele")
+	public String group1XdmDele(Group1Dto group1Dto) {
+		group1Service.delete(group1Dto);
+		return "redirect:/group1/group1XdmList";
+	}
+	
+	
 }
 
 

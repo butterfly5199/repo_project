@@ -44,6 +44,14 @@
 	 	UPDATE group1 SET
 	 		name=#{name}
 	 	WHERE seq=#{seq}	
-	 </update>	 
+	 </update>	
+	 
+	 <delete id="delete">
+	 DELETE FROM group1
+	 where seq=#{seq}
+	 ;
+	 
+	 
+	 </delete> 
 	  	  
 </mapper>

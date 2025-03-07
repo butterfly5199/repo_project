@@ -38,6 +38,9 @@ public class Group1Service {
 		return group1Dao.update(group1Dto);
 	}
 	
+	public int delete(Group1Dto group1Dto){
+		return group1Dao.delete(group1Dto);
+	}
 }
 
 
