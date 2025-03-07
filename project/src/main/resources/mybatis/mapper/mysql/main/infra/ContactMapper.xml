@@ -91,9 +91,9 @@
 	 	where seq=#{seq}
 	 </delete>
 	 
- 	<update id="uelete">s
+ 	<update id="uelete">
 	 	UPDATE contact SET
-	 		delNy=1 
+	 		<!--delNy=1--> 
  		WHERE seq=#{seq}
 	 </update>
 	  	  
