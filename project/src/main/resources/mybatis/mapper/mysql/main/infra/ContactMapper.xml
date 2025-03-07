@@ -91,7 +91,7 @@
 	 	where seq=#{seq}
 	 </delete>
 	 
- 	<update id="uelete">
+ 	<update id="uelete">s
 	 	UPDATE contact SET
 	 		delNy=1 
  		WHERE seq=#{seq}
