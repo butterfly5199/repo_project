@@ -15,6 +15,7 @@ public interface Group1Dao {
 	public int insert(Group1Dto group1Dto);
 	public int update(Group1Dto group1Dto);
 	public int delete(Group1Dto group1Dto);
+	public int uelete(Group1Dto group1Dto);
 	
 //	public Dao<Group1Dto> selectOne();	
 }

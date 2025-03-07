@@ -38,4 +38,11 @@ public class ContactService {
 		return contactDao.update(contactDto);
 	}
 	
+	public int delete(ContactDto contactDto) {
+		return contactDao.delete(contactDto);
+	}
+	
+	public int uelete(ContactDto contactDto) {
+		return contactDao.uelete(contactDto);
+	}
 }

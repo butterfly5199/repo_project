@@ -41,6 +41,10 @@ public class Group1Service {
 	public int delete(Group1Dto group1Dto){
 		return group1Dao.delete(group1Dto);
 	}
+	
+	public int uelete(Group1Dto group1Dto){
+		return group1Dao.uelete(group1Dto);
+	}
 }
 
 

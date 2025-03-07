@@ -11,7 +11,8 @@
 			name
 		FROM
 		    group1
-		WHERE 1=1		
+		WHERE 1=1	
+			AND delNy = 0	
 		ORDER BY seq DESC	
 	</select>	
 	
@@ -47,11 +48,14 @@
 	 </update>	
 	 
 	 <delete id="delete">
-	 DELETE FROM group1
-	 where seq=#{seq}
-	 ;
+		 DELETE FROM group1
+		 where seq=#{seq}
+	 </delete>
 	 
-	 
-	 </delete> 
+	 <update id="uelete">
+	 	UPDATE group1 SET
+	 		delNy=1
+	 	WHERE seq=#{seq}	
+	 </update>
 	  	  
 </mapper>

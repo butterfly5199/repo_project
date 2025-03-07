@@ -90,6 +90,11 @@ public class Group1Controller {
 		return "redirect:/group1/group1XdmList";
 	}
 	
+	@RequestMapping(value = "/group1/group1XdmUele")
+	public String group1XdmUele(Group1Dto group1Dto) {
+		group1Service.uelete(group1Dto);
+		return "redirect:/group1/group1XdmList";
+	}
 	
 }
 

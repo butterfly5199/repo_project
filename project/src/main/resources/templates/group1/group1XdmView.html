@@ -18,10 +18,28 @@
 <br>
 <br>
 <a href="/group1/group1XdmList">목록</a>
-<a th:href="@{group1XdmDele(seq=${item?.seq})}">삭제</a>
+<a th:href="@{/group1/group1XdmDele(seq=${item?.seq})}" id="delete">삭제</a>
 <a th:href="@{/group1/group1XdmMfom(seq=${item?.seq})}">수정</a>
+<a th:href="@{/group1/group1XdmUele(seq=${item?.seq})}" id="uelete">업제</a>
 
+<script type="text/javascript">
 	
+document.getElementById("delete").onclick = function(){
+	if(confirm("진짜요??")){
+		// 삭제 고고
+	} else{
+		// 아무것도 하지 않아도 됩니다.
+		return false;
+	} 
+}
+	
+document.getElementById("uelete").onclick = function(){
+	if(confirm("진짜요??")){
+	} else{
+		return false;
+	}		
+}		
+</script>	
 </body>
 </html>
 
