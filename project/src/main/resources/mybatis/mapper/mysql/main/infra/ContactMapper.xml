@@ -19,7 +19,8 @@
 			memo
 		FROM
 		    contact
-		WHERE 1=1	
+		WHERE 1=1
+		<!--AND delNy=0-->
 		ORDER BY seq DESC	
 	</select>	 
 	
@@ -92,7 +93,7 @@
 	 
  	<update id="uelete">
 	 	UPDATE contact SET
-	 		delNy=1
+	 		delNy=1 
  		WHERE seq=#{seq}
 	 </update>
 	  	  
